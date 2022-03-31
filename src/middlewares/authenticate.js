@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken")
 
 const verifyToken = (token) => {
     return new Promise((resolve,reject) => {
-        jwt.verify(token, "masaisecretkey" (err,decoded) => {
+        jwt.verify(token, "masaisecretkey", (err,decoded) => {
             if(err) return reject(err)
     
             return resolve(decoded)
